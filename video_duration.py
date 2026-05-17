@@ -770,13 +770,15 @@ class App(APP_BASE):
         return videos
 
     def _video_files_in_folder(self, folder):
+        videos = []
         try:
-            return sorted([
-                os.path.join(folder, f) for f in os.listdir(folder)
-                if os.path.splitext(f)[1].lower() in VIDEO_EXTS
-            ])
+            for root, _, files in os.walk(folder):
+                for filename in files:
+                    if os.path.splitext(filename)[1].lower() in VIDEO_EXTS:
+                        videos.append(os.path.join(root, filename))
         except Exception:
             return []
+        return sorted(videos)
 
     def _load_files(self, paths):
         new = [p for p in paths if p not in self._files]

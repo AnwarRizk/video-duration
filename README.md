@@ -13,7 +13,7 @@ duration, and total size.
 ## Features
 
 - Add one or more video files with the built-in file browser.
-- Add all supported videos from a selected folder.
+- Add all supported videos from a selected folder and its subfolders.
 - Optional drag-and-drop support when `tkinterdnd2` is installed.
 - Search/filter added videos by file name or path.
 - Remove selected videos or clear the full list.
@@ -59,7 +59,7 @@ python3 video_duration.py
 Then:
 
 1. Click **Add files** to choose individual videos.
-2. Click **Add folder** to add supported videos from one folder.
+2. Click **Add folder** to add supported videos from a folder and its subfolders.
 3. Drag videos or folders into the window if `tkinterdnd2` is installed.
 4. Use the search box to filter the current list.
 5. Select rows and press **Delete**, or click **Remove selected**, to remove them.
@@ -67,7 +67,6 @@ Then:
 
 ## Notes
 
-- Folder import currently scans only the selected folder, not subfolders.
 - Duplicate file paths are ignored.
 - Files that `ffprobe` cannot read are shown as `error`.
 - The right-click **Open containing folder** action uses `xdg-open`, so it is
