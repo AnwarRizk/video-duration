@@ -1,5 +1,9 @@
 # Video Duration Calculator
 
+<p align="center">
+  <img width="976" height="709" alt="Image" src="https://github.com/user-attachments/assets/d3cac0ad-a336-4a74-ac1a-c388353648be" />
+</p>
+
 A small desktop tool for calculating the total playtime of a video collection.
 
 The app lets you add individual videos or a folder of videos, reads each file's
